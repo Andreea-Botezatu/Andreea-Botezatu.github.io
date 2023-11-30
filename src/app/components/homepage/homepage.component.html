@@ -1,0 +1,89 @@
+<!-- <app-navbar></app-navbar> -->
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">WhiskerWonders</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav me-auto">
+        <div class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link " aria-current="page" href="/adopt"
+            >Find your Forever Friend</a
+          >
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" aria-current="page" href="/help">Tips</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" aria-current="page" href="/signin">Sign Up</a>
+          </div>
+      </div>
+      <!-- <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search" />
+          <button class="btn btn-primary" type="button">Search</button>
+        </form> -->
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="eight">
+        <h1>Your search ends here</h1>
+    
+    </div>
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="image1" alt="Random first slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>Our inspiration</h3>
+        <p>The love and happiness a fluffy friend can bring to our homes.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="image2" alt="Random second slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>Our mission</h3>
+        <p>Finding a forever home for less fortunate animals</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="image3" alt="Random third slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>Our team</h3>
+        <p>A handful of animal loving people with passion.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<div class="text-info">
+    <p>
+        Animals are incredible beings that share our planet, bringing diversity and joy to our lives. They come in various shapes, sizes, and species, each with its unique charm and characteristics. From loyal dogs and independent cats to exotic creatures in the wild, animals enrich our world in countless ways.
+    </p>
+    <p>
+        Showing love and compassion to animals is not just a sentimental gesture; it's a responsibility that stems from our role as stewards of the Earth. Animals, much like humans, experience emotions, form bonds, and deserve to live a life free from harm and neglect. When we extend love to animals, we create a harmonious relationship that benefits both them and us.
+    </p>
+    <p>
+        Enter a company dedicated to the welfare of animals—a beacon of hope and care in a world sometimes indifferent to their needs. This company doesn't just talk about compassion; it lives and breathes it. Their mission is to rescue, rehabilitate, and rehome animals in need. Whether it's rescuing abandoned pets, providing medical care for injured wildlife, or sheltering animals from abusive environments, this company is on the front lines, making a tangible difference.
+    </p>
+</div>
+<app-footer></app-footer>
+</body>

@@ -1,0 +1,109 @@
+
+<body [ngStyle]="{ 'background-image': 'url(' + backroundImage + ')' }">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WhiskerWonders</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav me-auto">
+          <div class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" aria-current="page" href="/adopt"
+              >Find your Forever Friend</a
+            >
+          </div>
+          <div class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/help">Tips</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" aria-current="page" href="/signin">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="bottom"></div>
+  <div class="bottom"></div>
+
+  <div class="row">
+
+    <div class="col-md-6 video-container text-center">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Tn3lZE0rRBs"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+  
+    <div class="col-md-6 tips-container text-left ml-4">
+      <div [ngStyle]="{ color: backColor }" class="tips-title">
+        <h2>Tips to take care of your new pet:</h2>
+        <br />
+      </div>
+      <ul [ngStyle]="{ color: backColor }" class="styled-list">
+        <li>Acquiring Necessary Supplies.</li>
+        <li>Creating a Safe Environment.</li>
+        <li>Keeping Your Pet Out of Harm's Way of Toxins.</li>
+        <li>Introducing New Pets to Resident Pets Slowly.</li>
+        <li>Giving Them an Appropriate Diet.</li>
+        <li>Getting Your Pet Microchipped and a Collar ID.</li>
+        <li>Getting Your Pet Spayed or Neutered.</li>
+        <li>Giving Them Plenty of Exercise.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dark-mode-button text-right">
+    <button class="btn btn-dark" (click)="toggleDarkTheme()">
+      View in dark mode
+    </button>
+  </div>
+  <br />
+
+  <br />
+  <div style="display: flex; align-items: center">
+    <div
+      [ngStyle]="{
+        color: backColor,
+        'margin-left': '100px',
+        'margin-right': '20px'
+      }"
+    >
+      Search for a specific animal to see more information:
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Search"
+      (input)="searchComponents()"
+    />
+  </div>
+  <br />
+  <div
+    #componentsContainer
+    [ngStyle]="{
+      color: backColor,
+      'margin-left': '100px',
+      'margin-right': '100px',
+      'display': 'flex',
+      'flex-direction': 'column'
+    }"
+  ></div>
+  <br />
+  <br />
+</body>

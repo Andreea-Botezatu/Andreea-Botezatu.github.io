@@ -1,0 +1,239 @@
+<!-- <app-navbar></app-navbar> -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">WhiskerWonders</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav me-auto">
+        <div class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/adopt"
+            >Find your Forever Friend</a
+          >
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" aria-current="page" href="/help">Tips</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" aria-current="page" href="/signin">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search" />
+          <button class="btn btn-primary" type="button">Search</button>
+        </form> -->
+    </div>
+  </div>
+</nav>
+<body>
+  <div class="space"></div>
+  <button class="btn btn-primary float-end me-5" (click)="scrollToBottom()">
+    Scroll Down
+  </button>
+
+  <div class="title">
+    <h2 class="pet-title">Your pet is near! Adoption process begins now</h2>
+  </div>
+
+  <div class="adoption-title">
+    <h3>Meet our superstars</h3>
+  </div>
+
+  <div class="pet-sections">
+    <div class="pet-section">
+      <div class="pet-info">
+        <div class="pet-image">
+          <img
+            src="../../../assets/images/closeup-vertical-shot-cute-european-shorthair-cat.jpg"
+            alt="Luna Image"
+          />
+        </div>
+        <div class="pet-description">
+          <p><strong>Name:</strong> Luna</p>
+          <p><strong>Age:</strong> 2 years old</p>
+          <p>Loving calico, playful and witty. Hates water.</p>
+          <i class="heart-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pet-section">
+      <div class="pet-info">
+        <div class="pet-image">
+          <img
+            src="../../../assets/images/labrador-retriever.jpg"
+            alt="Luna Image"
+          />
+        </div>
+        <div class="pet-description">
+          <p><strong>Name:</strong> Mark</p>
+          <p><strong>Age:</strong> 6 months old</p>
+          <p>Curious charm, and an ever-growing affection for playtime.</p>
+          <i class="heart-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pet-section">
+      <div class="pet-info">
+        <div class="pet-image">
+          <img
+            src="../../../assets/images/purebred-dog-being-cute-studio.jpg"
+            alt="Luna Image"
+          />
+        </div>
+        <div class="pet-description">
+          <p><strong>Name:</strong> Emmy</p>
+          <p><strong>Age:</strong> 3 years old</p>
+          <p>Brims with boundless energy. Shy but affectionate.</p>
+          <i class="heart-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pet-section">
+      <div class="pet-info">
+        <div class="pet-image">
+          <img
+            src="../../../assets/images/street-cat-istanbul-turkey.jpg"
+            alt="Luna Image"
+          />
+        </div>
+        <div class="pet-description">
+          <p><strong>Name:</strong> Dave</p>
+          <p><strong>Age:</strong> 1 year old</p>
+          <p>A penchant for cozy naps and stealthy pounces.</p>
+          <i class="heart-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pet-section">
+      <div class="pet-info">
+        <div class="pet-image">
+          <img
+            src="../../../assets/images/closeup-shot-sulphur-crested-cockatoo-perched-branch-yellow-background.jpg"
+            alt="Luna Image"
+          />
+        </div>
+        <div class="pet-description">
+          <p><strong>Name:</strong> Carl</p>
+          <p><strong>Age:</strong> 8 months old</p>
+          <p>Feathered charmer showcasing joyful squawks.</p>
+          <i class="heart-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="adoption-title">
+    <h3>
+      If you fell in love with any of our little friends, complete the form
+      below and let us proceed with the adoption
+    </h3>
+  </div>
+
+  <div class="row">
+    <!-- Pets Section -->
+    <div class="col-md-6">
+      <div class="table-title">
+       <br>
+      </div>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Pet ID</th>
+            <th class="text-left">Pet Name</th>
+          </tr>
+        </thead>
+        <tbody class="table-hover">
+          <tr>
+            <td class="text-left">1</td>
+            <td class="text-left">Luna</td>
+          </tr>
+          <tr>
+            <td class="text-left">2</td>
+            <td class="text-left">Mark</td>
+          </tr>
+          <tr>
+            <td class="text-left">3</td>
+            <td class="text-left">Emmy</td>
+          </tr>
+          <tr>
+            <td class="text-left">4</td>
+            <td class="text-left">Dave</td>
+          </tr>
+          <tr>
+            <td class="text-left">5</td>
+            <td class="text-left">Carl</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-6">
+      <div class="adoption-form">
+        <form [formGroup]="adoptionForm" (ngSubmit)="onAdoptionSubmit()">
+          <div class="form-box">
+            <div class="form-group">
+              <label for="accountId">Account ID</label>
+              <input
+                type="text"
+                formControlName="accountId"
+                class="form-control"
+                placeholder="Account ID"
+                required
+              />
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="showHelp()"
+              >
+                Help
+              </button>
+              <div class="help-indication" *ngIf="showHelpText">
+                Account ID is assigned at account creation. If you do not have
+                an account, head to the sign-up tab and create one. If you
+                already have an account, log in and the ID will be
+                autocompleted.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="petName">Pet ID</label>
+              <input
+                type="text"
+                formControlName="petName"
+                class="form-control"
+                placeholder="Pet ID"
+                required
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-spot">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary float-end me-5" (click)="scrollToTop()">
+    Scroll Up
+  </button>
+  <div class="bottom"></div>
+</body>

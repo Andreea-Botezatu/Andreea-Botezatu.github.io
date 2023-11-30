@@ -1,0 +1,55 @@
+.navbar {
+  padding-left: 50px;
+  padding-right: 50px;
+  filter: drop-shadow(0 0 0.15rem #b4aa99);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #1a1b1f;
+  size: 12px;
+}
+
+.navbar-toggler {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+a:hover {
+  color: white;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.bottom {
+  height: 100px;
+}
+
+.dark-mode-button {
+  margin-left: 80vw;
+}
+
+#searchBar {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
